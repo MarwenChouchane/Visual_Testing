@@ -4,6 +4,7 @@
 }
 .my-page .ui-listview li .ui-btn .ui-li-aside {
 	color: #eee;
+	/*background : #ff0000;*/
 }
 
 /* First breakpoint is 48em (768px). 3 column layout. Tiles 250x250 pixels incl. margin at the breakpoint. */
