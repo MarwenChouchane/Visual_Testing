@@ -1,19 +1,15 @@
 package base;
 
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.SortableDataTablesPage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
 public class BaseTests {
     protected static WebDriver driver;
-    //protected static SearchPage page;
-    //protected static SortableDataTablesPage page;
     protected static EyesManager eyesManager;
 
     @BeforeClass
@@ -27,6 +23,7 @@ public class BaseTests {
         }
 
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         eyesManager = new EyesManager(driver, "The Internet");
 
         //Change this to your own directory
@@ -38,7 +35,7 @@ public class BaseTests {
 
     @AfterClass
     public static void tearDown() {
-        driver.quit();
+        //driver.quit();
         eyesManager.abort();
     }
 }

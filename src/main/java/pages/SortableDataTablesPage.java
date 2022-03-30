@@ -8,8 +8,11 @@ public class SortableDataTablesPage {
     private WebDriver driver;
 
     private By TABLE = By.xpath("//table[@id='table1']");
-
     private String HEADER_FORMAT = "//table[@id='table1']/descendant::span[text()='%s']/parent::th[contains(@class, 'header')]";
+    // descendant = child of table -->
+    // span[text()='%s'] = Tous les span contient un text
+    // parent = avec le parant -->
+    // th[contains(@class, 'header')] = Tous les th qui contient la class header
     private By LAST_NAME_HEADER = By.xpath(String.format(HEADER_FORMAT, "Last Name"));
     private By FIRST_NAME_HEADER = By.xpath(String.format(HEADER_FORMAT, "First Name"));
     private By EMAIL_HEADER = By.xpath(String.format(HEADER_FORMAT, "Email"));

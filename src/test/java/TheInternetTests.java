@@ -7,6 +7,7 @@ public class TheInternetTests extends BaseTests {
 
     private SortableDataTablesPage page = new SortableDataTablesPage(driver);
 
+    //Organisation des tests
     @BeforeClass
     public static void startVisualTestSuite(){
         eyesManager.setBatchName("Sort Table");
